@@ -7,3 +7,5 @@
 そこで，LaTeXを用いた，２段抜きと３段抜きの並存サンプルをこのリポジトリに置いてみました. tcolorboxのmagazineライブラリを使うとまあまあらくにできます，という話です.
 
 以上です.
+
+![nidan_sandan](./nidan_sandan.png)
