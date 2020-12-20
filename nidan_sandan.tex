@@ -1,0 +1,48 @@
+\documentclass[b5j,10pt,twoside,uplatex,dvipdfmx,landscape]{jsarticle}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{multirow}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\tcbuselibrary{magazine}
+\pagestyle{empty}
+\begin{document}
+
+\newbox\firstfigure
+\setbox\firstfigure=\hbox{\includegraphics[width=7cm]{nidan_nuki.png}}
+\newbox\secondfigure
+\setbox\secondfigure=\hbox{\includegraphics[width=10cm]{sandan_nuki.png}}
+
+\newdimen\firstbreak
+\newdimen\secondbreak
+\newdimen\thirdbreak
+
+\firstbreak=\textheight
+\advance\firstbreak-\ht\firstfigure
+
+\secondbreak=\textheight
+\advance\secondbreak-\ht\firstfigure
+\advance\secondbreak-\ht\secondfigure
+
+\thirdbreak=\textheight
+\advance\thirdbreak-\ht\secondfigure
+
+\begin{tcolorbox}[blanker,
+width=4.4cm,
+enforce breakable,
+break at=\the\firstbreak/\the\secondbreak/\the\thirdbreak/\the\thirdbreak,
+reset box array,
+store to box array
+]
+\small\lipsum[1-6]
+\end{tcolorbox}
+
+\renewcommand{\arraystretch}{0}
+
+\begin{tabular}{c|c|c|c}
+\multicolumn{2}{c|}{\box\firstfigure}&&\\[6.5pt]
+&\useboxarray{2}&\multirow[t]{2}{*}{\useboxarray{3}}&\multirow[t]{2}{*}{\useboxarray{4}}\\[6.5pt]
+\multirow[t]{2}{*}{\useboxarray{1}}&\multicolumn{3}{c}{\box\secondfigure}
+\end{tabular}
+
+\end{document}
