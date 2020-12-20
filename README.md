@@ -1,0 +1,3 @@
+# nidan_sandan
+２段抜きと３段抜きの並存サンプル(LaTeX)
+tcolorboxのmagazineライブラリを使うとまあまあらくにできます
