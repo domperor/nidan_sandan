@@ -1,3 +1,3 @@
-# nidan_sandan
-２段抜きと３段抜きの並存サンプル(LaTeX)
-tcolorboxのmagazineライブラリを使うとまあまあらくにできます
+# ２段抜きと３段抜きの並存
+LaTeXを用いた，２段抜きと３段抜きの並存サンプルです.
+tcolorboxのmagazineライブラリを使うとまあまあらくにできます.
